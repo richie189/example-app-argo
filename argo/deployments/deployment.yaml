@@ -5,6 +5,7 @@ metadata:
   labels:
     app: example-app
   annotations:
+    deployment.kubernetes.io/revision: '1'
 spec:
   selector:
     matchLabels:
