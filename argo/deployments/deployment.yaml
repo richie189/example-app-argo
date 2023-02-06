@@ -3,11 +3,11 @@ kind: Deployment
 metadata:
   name: example-deploy
   labels:
-    app: example-app-argo
+    app: example-app
 spec:
   selector:
     matchLabels:
-      app: example-app-argo
+      app: example-app
   replicas: 2
   strategy:
     type: RollingUpdate
@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        app: example-app-argo
+        app: example-app
     spec:
       containers:
-      - name: example-app-argo
+      - name: example-app
         image: aimvector/python:1.0.0
         imagePullPolicy: Always
         ports:
